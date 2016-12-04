@@ -20,7 +20,7 @@ def find_path(dir):
             coordinate = (currentx, currenty + i)
             if coordinate not in coordinates:
                 coordinates.append(coordinate)
-            elif found_twice == False:
+            elif not found_twice:
                 found_twice = True
                 print "Twice:", abs(currentx) + abs(currenty + i)
         currenty += steps
@@ -30,7 +30,7 @@ def find_path(dir):
             coordinate = (currentx + i, currenty)
             if coordinate not in coordinates:
                 coordinates.append(coordinate)
-            elif found_twice == False:
+            elif not found_twice:
                 found_twice = True
                 print "Twice:", abs(currentx + i) + abs(currenty)
         currentx += steps
@@ -39,7 +39,7 @@ def find_path(dir):
             coordinate = (currentx, currenty - i)
             if coordinate not in coordinates:
                 coordinates.append(coordinate)
-            elif found_twice == False:
+            elif not found_twice:
                 found_twice = True
                 print "Twice:", abs(currentx) + abs(currenty - i)
         currenty -= steps
@@ -49,7 +49,7 @@ def find_path(dir):
             coordinate = (currentx - i, currenty)
             if coordinate not in coordinates:
                 coordinates.append(coordinate)
-            elif found_twice == False:
+            elif not found_twice:
                 found_twice = True
                 print "Twice:", abs(currentx - i) + abs(currenty)
         currentx -= steps
